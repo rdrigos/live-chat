@@ -1,0 +1,9 @@
+**/.idea
+**/.idx
+**/.vscode
+**/node_modules
+**.sql
+package.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
