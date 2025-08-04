@@ -1,6 +1,6 @@
 {
   "name": "live-chat",
-  "description": "",
+  "description": "Simple and fast chat for real-time messaging between connected users",
   "version": "1.0.0",
   "author": {
     "name": "Rafael Drigo",
@@ -18,6 +18,8 @@
     "@nestjs/config": "4.0.2",
     "@nestjs/core": "11.0.1",
     "@nestjs/platform-express": "11.0.1",
+    "@nestjs/swagger": "11.2.0",
+    "@scalar/nestjs-api-reference": "0.5.12",
     "reflect-metadata": "0.2.2",
     "rxjs": "7.8.1",
     "zod": "4.0.14"

@@ -7,6 +7,7 @@ export const environmentSchema = z.object({
   // Application
   NAME: z.string(),
   DESCRIPTION: z.string(),
+  VERSION: z.string().optional().default('1.0.0'),
   PORT: z.coerce.number().min(0).max(65535).optional().default(3001),
 });
 
