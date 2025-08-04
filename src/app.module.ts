@@ -1,9 +1,15 @@
-import { AppController } from '@/app.controller';
-import { AppService } from '@/app.service';
+import { EnvironmentModule } from '@/infrastructure/environment/environment.module';
+import { environmentSchema } from '@/infrastructure/environment/environment.schema';
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ConfigModule.forRoot({
+      validate: (env) => environmentSchema.parse(env),
+      isGlobal: true,
+    }),
+    EnvironmentModule,
+  ],
 })
 export class AppModule {}
