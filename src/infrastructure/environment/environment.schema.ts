@@ -9,6 +9,9 @@ export const environmentSchema = z.object({
   DESCRIPTION: z.string(),
   VERSION: z.string().optional().default('1.0.0'),
   PORT: z.coerce.number().min(0).max(65535).optional().default(3001),
+
+  // Database
+  DATABASE_URL: z.url(),
 });
 
 export type Environment = z.infer<typeof environmentSchema>;

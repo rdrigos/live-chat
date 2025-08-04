@@ -1,5 +1,6 @@
 import { EnvironmentModule } from '@/infrastructure/environment/environment.module';
 import { environmentSchema } from '@/infrastructure/environment/environment.schema';
+import { PrismaModule } from '@/infrastructure/prisma/prisma.module';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
@@ -10,6 +11,7 @@ import { ConfigModule } from '@nestjs/config';
       isGlobal: true,
     }),
     EnvironmentModule,
+    PrismaModule,
   ],
 })
 export class AppModule {}
